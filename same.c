@@ -9,12 +9,9 @@ int main(){
 		scanf("%d",&arr[i]);
 	}
 	for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-			if(arr[i]+arr[j+1]==k){
-				printf("(%d %d)",arr[i],arr[j+1]);
-			}
-			else{
-				arr[j++]=arr[i];
+		for(j=i+1;j<n;j++){
+			if(arr[i]+arr[j]==k){
+				printf("(%d %d)",arr[i],arr[j]);
 			}
 			
 		}
